@@ -1,18 +1,53 @@
 body{
-    background-image: url(../img/slide01.jpg);
+    background:linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.05)), url(../img/gif.gif);
     padding: 0;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Rokkitt', serif;
-    color: red;
+    background-position: center;
+    background-size: 80%;
+    /* background-repeat: no-repeat; */
+}
+*{
+    /* outline: 1px solid red; */
 }
 menu{
     background: transparent;
 }
-select,option{
+select{
     background: transparent;
-    color:#F76F6E ;
+    color:#17A2B8;
     font-size: 1.5vw;
     font-family: 'Roboto', sans-serif;
     
+}
+#cedes{
+    margin-left: 20px;
+}
+#titulo{
+    font-family: 'Rokkitt', serif;
+    color: #F9A91A;
+    /* margin-left: 10px; */
+}
+#parrafo{
+    font-family: 'Roboto', sans-serif;
+    color: #17A2B8;
+    /* margin-left: 10px; */
+}
+#juego{
+    margin-top: 40px;
+}
+#texto-card{
+    margin-top: 50px;
+    font-size: 1.7vw;
+}
+#input-nombre{
+    width: 90%;
+}
+#comprobar{
+    background-color: #F9A91A;
+    color: white;
+    border: 2px solid #f0a01a;
+    padding: 8px 30px;
+}
+img{
+    height: 60vh;
 }

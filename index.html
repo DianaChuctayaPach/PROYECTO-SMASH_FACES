@@ -28,24 +28,46 @@
             </button>
         </nav>
     </div>
-     <h1>Play Coders</h1>
-     <div class="container">
-         <div class="row">
-             <div class="">
-                    <select class="right" id="select">
-                            <option value="">PROMOCIONES:</option>
-                            <option value="chile_4" >4° Promoción Chile</option>
-                            <option value="lima_5" >5° Promoción Lima</option>
-                            <option value="lima_6" >6° Promoción Lima</option>
-                        </select> 
-                        
-             </div>
-             <div class="col">
+     
+     <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-12">
+                    <h1 id="titulo">Smash Faces</h1>
+                    <p class="h8" id="parrafo">
+                        Bienvenidas al juego de Smash Faces, tú misión es poder identificar a todas tus compañeras de clase Ingresando para ellos su nombre.Tienes 5 oprtunidades antes de perder 1 punto y pasar a la siguiente.
+                    </p>
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    <button class="btn btn-outline-info my-2 my-sm-0" type="">Elige tú sede:</button>
+                    <!-- <input class="form-control mr-sm-2" type="text" id="promocion" placeholder="">   -->
+                    <select class="right mr-sm-2" id="cedes">
+                            <option value="chile_4" >Chile</option>
+                            <option value="lima_5" >Lima</option>
+                            <option value="lima_6" >Arequipa</option>
+                    </select>
                 </form>
-             </div>
+            </div>
+
+        </div>
+      
+     </div>
+     <div class="container" id="juego">
+         <div class="row">
+            <!-- <div class="col-12 col-sm-12 col-md-12"> -->
+                <div class="col" id="fotos">
+                    <img src="assets/img/5lima/ariadna-izaguirre.jpg" class="img-responsive" alt="">
+                </div>
+               
+                <div class="col" id="rpta"> 
+                <div class="card text-white bg-dark mb-3" style="max-width: 30rem;height:100%;">
+                    <div class="card-header">Empecemos el juego</div>
+                    <div class="card-body">
+                        <p id="texto-card">Ingresa su nombre </p> 
+                        <input type="text" class="" id="input-nombre" placeholder="Nombre"><br> <br>
+                        <div class="text-center"><button class="" id="comprobar" type="sumit">COMPROBAR</button></div>
+                    </div>
+                </div>
+                </div>
+            <!-- </div> -->
          </div>
      </div>
         
