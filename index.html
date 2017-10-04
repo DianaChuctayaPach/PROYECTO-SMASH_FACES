@@ -11,6 +11,7 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="img/x-icon">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
 
 </head>
 <body>
@@ -18,25 +19,26 @@
      
      <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-6 col-md-6 col-12">
+            <div class="col-sm-11 col-md-11 col-11">
                     <h1 id="titulo">Smash Faces</h1>
                     <hr> <br>
                     <p class="h8" id="parrafo">
                         Bienvenidas al juego de Smash Faces, tú misión es poder identificar a todas tus compañeras de clase Ingresando para ellos su nombre.Tienes 5 oprtunidades antes de perder 1 punto y pasar a la siguiente.
                     </p>
                 <form class="form-inline my-2 my-lg-0">
-                    <button class="btn btn-outline-info my-2 my-sm-0" type="">Elige tú sede:</button>
+                    <button class="btn btn-outline-info my-2 my-sm-0 option animated jackInTheBox" type="submit">Elige tú sede:</button>
                     <!-- <input class="form-control mr-sm-2" type="text" id="promocion" placeholder="">   -->
                     <select class="right mr-sm-2" id="select">
                             <option hidden="">Sede</option>
-                            <option value="chile" id="Chile" >Chile</option>
-                            <option value="lima" id="Lima" >Lima</option>
-                            <option value="arequipa" id="Arequipa" >Arequipa</option>
+                            <option value="Chile" id="Chile" >Chile</option>
+                            <option value="Lima" id="Lima" >Lima</option>
+                            <!-- <option value="arequipa" id="Arequipa" >Arequipa</option> -->
                     </select>
+                    <label class="right" id="label">Puntos: <span id="puntaje" class="">0</span> puntos</label>
                 </form>
-                <label class="right">Puntos: <span id="puntaje">0</span> puntos</label>
+               
             </div>
-
+            
         </div>
       
      </div>
@@ -53,9 +55,9 @@
                     <div class="card-body">
                         <p id="texto-card">Ingresa su nombre </p> 
                         <input type="text" class="" id="input-nombre" placeholder="Nombre"><br> <br>
-                        <div class="text-center"><button class="" id="comprobar" type="sumit">COMPROBAR</button></div>
+                        <div class="text-center">
+                            <button id="comprobar" type="sumit" class="option animated jackInTheBox">COMPROBAR</button></div>
                     </div>
-                    <p class="mensaje text-center"></p>
                 </div>
                 </div>
             <!-- </div> -->

@@ -29,6 +29,14 @@ select{
 }
 #select{
     margin-left: 20px;
+    padding: 6px;
+    border: 1px solid #17A2B8;
+    border-radius: 5px;
+}
+#label{
+    color: #17A2B8;
+    font-size: 25px;
+    margin-left: 400px;
 }
 #titulo{
     font-family: 'Rokkitt', serif;
@@ -60,5 +68,6 @@ select{
     display: none;
 }
 img{
-    height: 60vh;
+    height: 70vh;
+    border-radius: 300px;   
 }

@@ -1,3 +1,4 @@
+// $(function(){$("#puntaje").addClass("option animated zoomInLeft");});
 $(function () {
     var Chile = [{
         image: "anais-araya.jpg",
@@ -44,38 +45,7 @@ $(function () {
         image: "teresa-lara.jpg",
         name: "teresa",
     }
-    ]
-    var Arequipa = [{
-        image: "daguiana-revoredo.jpg",
-        name: "daguiana",
-    }, {
-        image: "elizabeth-condori.jpg",
-        name: "elizabeth",
-    }, {
-        image: "grecia-rayme.jpg",
-        name: "grecia",
-    }, {
-        image: "janine-vega.jpg",
-        name: "janine",
-    }, {
-        image: "michelle-more.jpg",
-        name: "michelle",
-    }, {
-        image: "mishel-velasquez.jpg",
-        name: "mishel",
-    }, {
-        image: "rosario-felix.jpg",
-        name: "rosario",
-    },{
-        image:"arantza-burga.jpg",
-        name:"arantza"
-    }
-    ]
-    // var select = $("select").val();
-    // var imagesAleatorios = function (arrayimg) {
-    //     Math.floor(Math.random() * select.length); //genera 20 numeros aleatorios
-    //     console.log(imagesAleatorios);
-    // }
+    ];
     var indice;
     var indices = [];
     var contClick = 0;
@@ -86,56 +56,52 @@ $(function () {
                 //verificar que el numero aleatorio no haya salido
                 if (indices.indexOf(numAleatorio) == -1) {
                     indices.push(numAleatorio);
-                    console.log(indices);
+                    console.log(numAleatorio);
                     return numAleatorio;
                 }
             }
         } else {
-            alert("no hay mas fotos, ganastes el juego");
+            swal("MUY BIEN !!", "YA no hay images GANASTE!", "success");
         }
     }
     var mostrarFotos = function (sede, contenedor, array) {
-        //imprimir la primera foto aleatoriamente
+        
         var indice = generarAleatorios(array);
         contenedorImg.attr("src", "assets/img/" + sede + "/" + array[indice].image);
-
+        var  nombrearray=array[indice].name;
+        console.log(nombrearray)
         var puntaje = $("#puntaje");
-        // var mensaje = $(".mensaje");
-        
+     
         $("#comprobar").click(function () {
             var comprobar=$("#comprobar");
             var input_nombre=$("#input-nombre").val();
             contClick++;
-           
-            //si adivinas el nombre contClick=0; sumas 5 puntos
             if (input_nombre.toLowerCase() === array[indice].name.toLowerCase()) {
                 contClick = 0;
-                input_nombre.val();
-                puntaje.text(eval(puntaje.text()) + 5);
                 swal("Good job!", "Muy bien lo Iciste!", "success");
-                console.log(input_nombre)
-                //se muestra otra imagen aleatoriamente
+                console.log(array[indice].name);
+                puntaje.text(eval(puntaje.text()) + 5);
+                $("#puntaje").addClass("option animated zoomInLeft")
+                $("#puntaje").css("font-size","30px");
+        // otra img
                 setTimeout(function () {
                     indice = generarAleatorios(array);
                     contenedorImg.attr("src", "assets/img/" + sede + "/" + array[indice].image);
-                    // mensaje.text("");
-                }, 1000);
+                
+                }, 500);
 
             } else {
-                if (contClick <= 4) {
-                    swal(":(!", "Sigue Intentando!", "error");
-                    console.log(":(")
+                if (contClick < 5) {
+                    swal("=| Sigue Intentando!" ,"su nombre no es " + input_nombre  , "error");
+                    console.log(":(" + array[indice].name)
                 } else {
                     contClick = 0;
-                    input_nombre.attr("disabled", true);
-
                     setTimeout(function () {
                         indice = generarAleatorios(array);
                         contenedorImg.attr("src", "assets/img/" + sede + "/" + array[indice].image);
-                        // mensaje.text("");
-                        input_nombre.attr("disabled", false);
+                    
                         input_nombre.val("");
-                    }, 2000);
+                    }, 1000);
 
                     puntaje.text(eval(puntaje.text()) - 1);
                 }
@@ -153,13 +119,10 @@ $(function () {
         if (sede === "Lima") {
             mostrarFotos(sede, contenedorImg,Lima );
             indices = [];
-        } if(sede == "Arequipa") {
-            mostrarFotos(sede, contenedorImg,Arequipa );
-            indices = [];
-        }else  {
+        } else{
             mostrarFotos(sede, contenedorImg,Chile );
             indices = [];
-        } 
+        }
         
     });
 });
