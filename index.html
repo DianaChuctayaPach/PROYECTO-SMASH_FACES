@@ -20,6 +20,7 @@
         <div class="row">
             <div class="col-sm-6 col-md-6 col-12">
                     <h1 id="titulo">Smash Faces</h1>
+                    <hr> <br>
                     <p class="h8" id="parrafo">
                         Bienvenidas al juego de Smash Faces, tú misión es poder identificar a todas tus compañeras de clase Ingresando para ellos su nombre.Tienes 5 oprtunidades antes de perder 1 punto y pasar a la siguiente.
                     </p>
@@ -27,11 +28,13 @@
                     <button class="btn btn-outline-info my-2 my-sm-0" type="">Elige tú sede:</button>
                     <!-- <input class="form-control mr-sm-2" type="text" id="promocion" placeholder="">   -->
                     <select class="right mr-sm-2" id="select">
+                            <option hidden="">Sede</option>
                             <option value="chile" id="Chile" >Chile</option>
                             <option value="lima" id="Lima" >Lima</option>
-                            <option value="Arequipa" id="Arequipa" >Arequipa</option>
+                            <option value="arequipa" id="Arequipa" >Arequipa</option>
                     </select>
                 </form>
+                <label class="right">Puntos: <span id="puntaje">0</span> puntos</label>
             </div>
 
         </div>
@@ -41,7 +44,7 @@
          <div class="row">
             <!-- <div class="col-12 col-sm-12 col-md-12"> -->
                 <div class="col" id="fotos">
-                    <img src="assets/img/5lima/ariadna-izaguirre.jpg" class="img-responsive" alt="">
+                    <img src="" class="img-responsive" alt="">
                 </div>
                
                 <div class="col" id="rpta"> 
@@ -52,6 +55,7 @@
                         <input type="text" class="" id="input-nombre" placeholder="Nombre"><br> <br>
                         <div class="text-center"><button class="" id="comprobar" type="sumit">COMPROBAR</button></div>
                     </div>
+                    <p class="mensaje text-center"></p>
                 </div>
                 </div>
             <!-- </div> -->
@@ -66,5 +70,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     <script src="assets/js/jquery.js"></script>
+    
 </body>
 </html>
